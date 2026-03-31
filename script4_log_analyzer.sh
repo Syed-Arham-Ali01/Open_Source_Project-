@@ -1,4 +1,6 @@
 #!/bin/bash
+# Name - Syed Arham Ali
+# Reg No. - 24BCE10654
 # Script 4: Log File Analyzer
 
 LOGFILE=$1
