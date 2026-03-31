@@ -1,4 +1,6 @@
 #!/bin/bash
+# Name - Syed Arham Ali
+# Reg No. - 24BCE10654
 # Script 2: FOSS Package Inspector
 
 PACKAGE="python3"
