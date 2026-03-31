@@ -1,4 +1,6 @@
 #!/bin/bash
+# Name - Syed Arham Ali
+# Reg No. - 24BCE10654
 # Script 5: Manifest Generator
 
 read -p "Tool you use: " TOOL
