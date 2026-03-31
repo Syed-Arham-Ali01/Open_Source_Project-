@@ -1,19 +1,19 @@
 #!/bin/bash
-# Script 4: Log File Analyzer
+# Script 2: FOSS Package Inspector
 
-LOGFILE=$1
-KEYWORD=${2:-"error"}
-COUNT=0
+PACKAGE="python3"
 
-if [ ! -f "$LOGFILE" ]; then
-    echo "File not found!"
-    exit 1
+if dpkg -l | grep -q $PACKAGE; then
+    echo "$PACKAGE is installed."
+    dpkg -l | grep $PACKAGE
+else
+    echo "$PACKAGE is NOT installed."
 fi
 
-while IFS= read -r LINE; do
-    if echo "$LINE" | grep -iq "$KEYWORD"; then
-        COUNT=$((COUNT + 1))
-    fi
-done < "$LOGFILE"
-
-echo "Keyword '$KEYWORD' found $COUNT times in $LOGFILE"
+case $PACKAGE in
+    python3) echo "Python: a powerful open-source programming language";;
+    git) echo "Git: version control system for developers";;
+    vlc) echo "VLC: multimedia player that supports all formats";;
+    firefox) echo "Firefox: open-source web browser";;
+    *) echo "Unknown package";;
+esac
